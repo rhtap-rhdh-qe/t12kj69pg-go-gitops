@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: t12kj69pg-go-gitops
+  description: This is GitOps manifest for t12kj69pg-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=t12kj69pg-go
+    backstage.io/kubernetes-id: t12kj69pg-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: t12kj69pg-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:t12kj69pg-go
